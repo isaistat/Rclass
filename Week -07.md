@@ -1,11 +1,4 @@
----
-title: "Regression & Epidemiology in R (Beginner Level)"
-author: "R Tutorial"
-output:
-  html_document:
-    theme: flatly
----
-
+# Regression & Epidemiology in R
 ## PART I-Regression modelling
 
 This chapter introduces **regression models and epidemiology measures** using a practical, health-focused approach.
@@ -52,17 +45,13 @@ data(infert)   # Case–control study
 
 ### 2. Linear Regression
 
-**How to interpret diagnostics (important):**
-- *Linearity (crPlots)*: Curved pattern → linear model inappropriate or transformation needed.
-- *Residuals vs Fitted*: Funnel shape → heteroscedasticity; random cloud → OK.
-- *QQ Plot / Shapiro test*: Strong deviation or p < 0.05 → residuals not normal (large samples tolerate this).
-- *VIF*: >5 (or >10) → problematic multicollinearity.
-
 ```r
 library(car)
 fit_lm <- lm(age ~ parity + education, data = infert)
 summary(fit_lm)
 ```
+**Interpretation:**
+> Each additional parity level increased age by 1.2 years (β = 1.2, 95% CI: 0.3–2.1, p = 0.01).
 
 **Diagnostics:**
 ```r
@@ -72,13 +61,15 @@ qqPlot(fit_lm$residuals)  # normality
 shapiro.test(fit_lm$residuals)
 vif(fit_lm)                # multicollinearity
 ```
+**How to interpret diagnostics (important):**
+- *Linearity (crPlots)*: Curved pattern → linear model inappropriate or transformation needed.
+- *Residuals vs Fitted*: Funnel shape → heteroscedasticity; random cloud → OK.
+- *QQ Plot / Shapiro test*: Strong deviation or p < 0.05 → residuals not normal (large samples tolerate this).
+- *VIF*: >5 (or >10) → problematic multicollinearity.
 
 **Goodness-of-fit:**
 - **R²** indicates proportion of variance explained (0–1, higher = better)
 - Residuals close to zero and evenly spread indicate good fit
-
-**Interpretation:**
-> Each additional parity level increased age by 1.2 years (β = 1.2, 95% CI: 0.3–2.1, p = 0.01).
 
 **Plotting (base R):**
 ```r
@@ -256,4 +247,5 @@ barplot(tab, beside=TRUE, names.arg=c("Exposed","Unexposed"), col=c("red","blue"
 ---
 
 **End of Regression & Epidemiology (Beginner)**
+
 
