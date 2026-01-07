@@ -1,4 +1,4 @@
-# Chapter 3: Data Preparation and Cleaning in R
+# Data Preparation and Cleaning in R
 
 In this chapter, you will learn how to **prepare and clean data** using R.  
 These steps are essential before performing **descriptive statistics, hypothesis testing, or modeling**.
@@ -187,3 +187,4 @@ You learned how to:
 
 **Next Chapter**  
 ➡️ Chapter 4: Descriptive Statistics and Exploratory Data Analysis
+
