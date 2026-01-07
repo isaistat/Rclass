@@ -1,12 +1,4 @@
----
-title: "Inferential Statistics in R (Beginner Level)"
-author: "R Tutorial"
-output:
-  html_document:
-    theme: flatly
----
-
-## 1. What This Chapter Does
+# Inferential Statistics in R (Beginner Level)
 
 This chapter introduces **inferential statistics for beginners** using a clear, decision-based flow.
 
@@ -389,4 +381,5 @@ For any inferential test:
 ---
 
 **End of Inferential Statistics**
+
 
