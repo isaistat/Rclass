@@ -11,7 +11,7 @@ You will learn how to:
 
 ---
 
-## 2. Example Data (Health-related Built-in R Datasets)
+## Example Data (Health-related Built-in R Datasets)
 
 To keep this chapter reproducible and health-focused, we use built-in datasets:
 
@@ -25,7 +25,7 @@ data(infert)  # Infertility case–control study
 
 ---
 
-## 3. Continuous Outcomes: Decision Flow
+## Par-I: Continuous Outcomes: Decision Flow
 
 To make results easy to understand, this chapter focuses on **direct test output and interpretation**.
 
@@ -35,7 +35,7 @@ We intentionally avoid reproducible-table frameworks here, so beginners can conc
 - writing results in words
 
 
-### Step 1: Check Normality
+### 1. Check Normality
 
 Normality matters mainly for **small samples**.
 
@@ -56,7 +56,7 @@ qqline(infert$age)
 
 ---
 
-### Step 2: One Group vs Reference Value
+### 2. One Group vs Reference Value
 
 #### Parametric: One-Sample t-test
 
@@ -101,7 +101,7 @@ wilcox.test(mtcars$mpg, mu = 20)
 
 ---
 
-### Step 3: Two Independent Groups
+### 3. Two Independent Groups
 
 #### Parametric: Independent (Two-Sample) t-test
 
@@ -131,7 +131,7 @@ wilcox.test(mpg ~ am, data = mtcars)
 
 ---
 
-### Step 4: Paired Data
+### 4. Paired Data
 
 #### Parametric: Paired t-test
 
@@ -162,7 +162,7 @@ wilcox.test(before, after, paired = TRUE)
 
 ---
 
-### Step 5: More Than Two Groups (One-way ANOVA)
+### 5. More Than Two Groups (One-way ANOVA)
 
 #### Parametric: One-way ANOVA
 
@@ -228,7 +228,7 @@ pairwise.wilcox.test(PlantGrowth$weight, PlantGrowth$group,
 
 ---
 
-### Step 6: Two-Way ANOVA
+### 6. Two-Way ANOVA
 
 Use when:
 - One continuous outcome
@@ -258,11 +258,11 @@ kruskal.test(age ~ parity, data = infert)
 
 ---
 
-## 4. Categorical Outcomes: Association vs Independence
+## Part-II: Categorical Outcomes: Association vs Independence
 
 Categorical tests assess **association**, often described as **lack of independence** between variables.
 
-### Step 1: Contingency Table
+### 1. Contingency Table
 
 ```r
 tab <- xtabs(ncases ~ alcgp + tobgp, data = esoph)
@@ -271,7 +271,7 @@ tab
 
 ---
 
-### Step 2: Chi-square Test of Independence
+### 2. Chi-square Test of Independence
 
 ```r
 chi <- chisq.test(tab)
@@ -297,7 +297,7 @@ chisq.test(tab)$expected
 
 ---
 
-### Step 3: Fisher’s Exact Test
+### 3. Fisher’s Exact Test
 
 ```r
 fisher.test(tab)
@@ -309,11 +309,11 @@ fisher.test(tab)
 
 ---
 
-## 5. Correlation (Continuous vs Continuous)
+## Part-III: Correlation (Continuous vs Continuous)
 
 Correlation measures **strength and direction of association**, not causation.
 
-### Pearson Correlation
+### 1. Pearson Correlation
 
 ```r
 cor.test(infert$age, infert$parity, method = "pearson")
@@ -335,7 +335,7 @@ cor.test(infert$age, infert$parity, method = "pearson")
 
 ---
 
-### Spearman Rank Correlation
+### 2. Spearman Rank Correlation
 
 ```r
 cor.test(infert$age, infert$parity, method = "spearman")
@@ -352,7 +352,7 @@ cor.test(infert$age, infert$parity, method = "spearman")
 
 ---
 
-### Kendall’s Tau Correlation
+### 3. Kendall’s Tau Correlation
 
 ```r
 cor.test(infert$age, infert$parity, method = "kendall")
@@ -369,7 +369,7 @@ cor.test(infert$age, infert$parity, method = "kendall")
 
 ---
 
-## 8. Interpreting Results: What to Check
+## Interpreting Results: What to Check
 
 For any inferential test:
 - State the null hypothesis
@@ -381,5 +381,6 @@ For any inferential test:
 ---
 
 **End of Inferential Statistics**
+
 
 
