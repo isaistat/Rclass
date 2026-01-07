@@ -1,13 +1,4 @@
----
-title: "Exploratory Data Analysis (EDA) in R – Descriptives, Tables, and Plots"
-author: "R Tutorial"
-output:
-  html_document:
-  
-    theme: flatly
----
-
-
+# Exploratory Data Analysis (EDA) in R – Descriptives, Tables, and Plots
 In this chapter, we perform **Exploratory Data Analysis (EDA)** to understand the data before any cleaning or modeling.
 
 ---
@@ -245,4 +236,5 @@ Helps to understand the direction of relation between two variables
 ---
 
 **End of EDA Chapter**
+
 
