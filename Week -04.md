@@ -211,30 +211,19 @@ plot(data$age, data$bmi)
 Helps to understand the direction of relation between two variables
 
 
-## 10.Chapter Checklist (Learning Outcomes)
+## Key takeaways
 
-✔ Descriptive measures (mean, median, SD, IQR)
-✔ Frequency & percentage tables
-✔ Reproducible tables (`gt`, `DT`, `flextable`, `tableone`)
-✔ Basic plots (histogram, boxplot, scatter)
-✔ Crosstabs with percentages
-✔ Correlation analysis
+- Descriptive measures (mean, median, SD, IQR)
+- Frequency & percentage tables
+- Reproducible tables (`gt`, `DT`, `flextable`, `tableone`)
+- Basic plots (histogram, boxplot, scatter)
+- Crosstabs with percentages
+- Correlation analysis
 
-**Not covered**:
-✘ Data cleaning
-✘ Variable recoding
-✘ Statistical modeling
-
----
-
-## 11.What Comes Next?
-
-➡ Data Cleaning & Transformation
-➡ Handling Missing Data
-➡ Creating Analysis-ready Variables
 
 ---
 
 **End of EDA Chapter**
+
 
 
