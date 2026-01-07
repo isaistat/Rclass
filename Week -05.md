@@ -1,3 +1,4 @@
+# Data Visualization (`ggplot`)
 This chapter introduces **basic data visualization using ggplot2** for beginners.
 
 You will learn:
@@ -301,4 +302,5 @@ Referral Link for more learning on ggplot: https://r-graph-gallery.com/
 
 
 **End of Data Visualization (Beginner)**
+
 
