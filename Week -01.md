@@ -174,7 +174,7 @@ This is the **most commonly used** data structure in R.
 
 | Symbol | Meaning |
 |------|---------|
-| `|` | OR |
+| "|" | OR |
 | `&` | AND |
 | `==` | Equal to |
 | `!=` | Not equal to |
@@ -238,4 +238,5 @@ https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts-in-the-R
 
 **End of Chapter 1**  
 In the next chapter, we will start writing our **first R commands** step by step.
+
 
